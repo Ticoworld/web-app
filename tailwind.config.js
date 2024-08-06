@@ -11,6 +11,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '@media print': {
+          '.print\:w-full': {
+            width: '100%',
+          },
+          '.print\:h-auto': {
+            height: 'auto',
+          },
+        },
+      });
+    },
+  ],
 }
 
