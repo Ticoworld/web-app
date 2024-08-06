@@ -81,13 +81,11 @@ const App = () => {
               />
             </div>
           </div>
-          <div id="user-cv" className="w-full max-w-3xl mb-10">
+          <div id="user-cv" className="w-full max-w-[1000px]">
             <UserCv activeLayout={activeLayout} activeFont={activeFont} />
           </div>
         </div>
-        <button 
-        className="bg-blue-500 p-2 rounded-lg text-gray-100 my-2 font-semibold fixed bottom-0"
-        onClick={() => { downloadPdf() }}>Download Cv</button>
+        <button onClick={() => { downloadPdf() }}>Download Cv</button>
       </AppContext.Provider>
     </div>
   );

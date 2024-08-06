@@ -18,7 +18,7 @@ const UserCv = ({ activeLayout, activeFont }) => {
           ? "font-mono"
           : ""
       }`}
-      style={{ width: "100%", maxWidth: "900px", height: "auto", minHeight: "842px" }}
+      style={{ width: "100%", maxWidth: "1000px", height: "auto", minHeight: "842px" }}
     >
       <CvHeader activeLayout={activeLayout} />
       <CvBody activeLayout={activeLayout} />
