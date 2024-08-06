@@ -66,7 +66,7 @@ const App = () => {
         location, setLocation, editIndex, setEditIndex, educationEntries, setEducationEntries,
         experienceEntries, setExperienceEntries, selectedColor, setSelectedColor
       }}>
-        <div className="flex justify-between items-start relative">
+        <div className="flex flex-col lg:flex-row justify-between items-start relative">
           <div className="w-1/12 sticky top-0">
             <HandleFormat active={active} setActive={setActive} />
           </div>
@@ -83,7 +83,7 @@ const App = () => {
             <UserCv activeLayout={activeLayout} activeFont={activeFont} />
           </div>
         </div>
-        <button onClick={downloadPdf}>Download PDF</button>
+        <button onClick={()=>{downloadPdf()}}>Download Cv</button>
       </AppContext.Provider>
     </div>
   );

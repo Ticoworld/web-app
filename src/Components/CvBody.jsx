@@ -16,16 +16,26 @@ const CvBody = ({ activeLayout }) => {
   return (
     <div className={`px-10 py-7 bg-white h-full flex-grow ${activeLayout !== 'top' ? 'w-6/8' : ''}`}>
       {/* Education */}
-      <h1 className={`bg-gray-300 text-center font-bold ${colorClasses[selectedColor]} rounded-sm text-lg`}>
+      <div  className={`bg-gray-200 text-center font-bold ${colorClasses[selectedColor]} rounded-sm text-lg pb-4 mt-6`}>
+        <h1>
         Education
       </h1>
-      <CvEducation />
+      </div>
+      
+      <div className="mb-6">
+        <CvEducation />
+      </div>
 
       {/* Experience */}
-      <h1 className={`bg-gray-300 text-center font-bold ${colorClasses[selectedColor]} rounded-sm text-lg`}>
+      <div  className={`bg-gray-200 text-center font-bold ${colorClasses[selectedColor]} rounded-sm text-lg pb-4`}>
+        <h1>
         Professional Experience
       </h1>
-      <CvExperience />
+      </div>
+      
+      <div className="mb-6">
+        <CvExperience />
+      </div>
     </div>
   );
 };
