@@ -67,23 +67,27 @@ const App = () => {
         experienceEntries, setExperienceEntries, selectedColor, setSelectedColor
       }}>
         <div className="flex flex-col lg:flex-row justify-between items-start relative">
-          <div className="w-1/12 sticky top-0">
-            <HandleFormat active={active} setActive={setActive} />
+          <div className="flex justify-between gap-3">
+            <div className="sticky top-0">
+              <HandleFormat active={active} setActive={setActive} />
+            </div>
+            <div>
+              <HandleEditPage
+                active={active}
+                activeLayout={activeLayout}
+                setActiveLayout={setActiveLayout}
+                activeFont={activeFont}
+                setActiveFont={setActiveFont}
+              />
+            </div>
           </div>
-          <div className="w-3/10">
-            <HandleEditPage
-              active={active}
-              activeLayout={activeLayout}
-              setActiveLayout={setActiveLayout}
-              activeFont={activeFont}
-              setActiveFont={setActiveFont}
-            />
-          </div>
-          <div id="user-cv" className="w-[793px] h-[842px]">
+          <div id="user-cv" className="w-full max-w-3xl mb-10">
             <UserCv activeLayout={activeLayout} activeFont={activeFont} />
           </div>
         </div>
-        <button onClick={()=>{downloadPdf()}}>Download Cv</button>
+        <button 
+        className="bg-blue-500 p-2 rounded-lg text-gray-100 my-2 font-semibold fixed bottom-0"
+        onClick={() => { downloadPdf() }}>Download Cv</button>
       </AppContext.Provider>
     </div>
   );

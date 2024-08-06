@@ -22,34 +22,34 @@ const CvHeader = ({ activeLayout }) => {
       } w-full flex gap-4 flex-col items-center ${
         activeLayout === "top"
           ? "justify-center h-40"
-          : "h-full items-start flex flex-grow-0 w-2/8 p-8"
-      }`}>
-      <h2 className={`font-extrabold text-gray-50 text-4xl`}>{fullName}</h2>
+          : "h-full items-start flex flex-grow-0 w-full sm:w-2/8 p-8"
+      }`}
+    >
+      <h2 className={`font-extrabold text-gray-50 text-2xl sm:text-4xl`}>{fullName}</h2>
       <div
-  className={`flex gap-5 ${
-    activeLayout === "top" ? "justify-between" : "flex-col items-start"
-  }`}
->
-  {email && (
-    <div className="flex items-center gap-2 text-white py-1 h-8">
-      <MdEmail className="text-xl" />
-      <p className="ml-1">{email}</p>
-    </div>
-  )}
-  {phone && (
-    <div className="flex items-center gap-2 text-white py-1 h-8">
-      <FaPhoneAlt className="text-xl" />
-      <p className="ml-1">{phone}</p>
-    </div>
-  )}
-  {address && (
-    <div className="flex items-center gap-2 text-white py-1 h-8">
-      <FaLocationDot className="text-xl" />
-      <p className="ml-1">{address}</p>
-    </div>
-  )}
-</div>
-
+        className={`flex gap-5 ${
+          activeLayout === "top" ? "justify-between" : "flex-col items-start"
+        }`}
+      >
+        {email && (
+          <div className="flex items-center gap-2 text-white py-1 h-8">
+            <MdEmail className="text-xl" />
+            <p className="ml-1">{email}</p>
+          </div>
+        )}
+        {phone && (
+          <div className="flex items-center gap-2 text-white py-1 h-8">
+            <FaPhoneAlt className="text-xl" />
+            <p className="ml-1">{phone}</p>
+          </div>
+        )}
+        {address && (
+          <div className="flex items-center gap-2 text-white py-1 h-8">
+            <FaLocationDot className="text-xl" />
+            <p className="ml-1">{address}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -2,10 +2,10 @@ import React from "react";
 import CvHeader from "./CvHeader";
 import CvBody from "./CvBody";
 
-const UserCv = ({ activeLayout, activeFont, educationEntries }) => {
+const UserCv = ({ activeLayout, activeFont }) => {
   return (
     <div
-      className={`shadow-lg flex w-[793px] h-[842px] ${
+      className={`shadow-lg flex ${
         activeLayout === "top"
           ? "flex-col"
           : activeLayout === "right"
@@ -17,9 +17,11 @@ const UserCv = ({ activeLayout, activeFont, educationEntries }) => {
           : activeFont === "mono"
           ? "font-mono"
           : ""
-      }`}>
+      }`}
+      style={{ width: "100%", maxWidth: "800px", height: "auto", minHeight: "842px" }}
+    >
       <CvHeader activeLayout={activeLayout} />
-      <CvBody activeLayout={activeLayout} educationEntries={educationEntries} />
+      <CvBody activeLayout={activeLayout} />
     </div>
   );
 };

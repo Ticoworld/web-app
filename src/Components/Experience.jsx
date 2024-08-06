@@ -69,7 +69,7 @@ const Experience = () => {
 
   return (
     <div>
-      <div className="bg-white py-5 px-3 rounded-xl shadow-lg mt-8 w-full flex flex-col justify-between gap-8">
+      <div className="bg-white py-5 px-3 rounded-xl shadow-lg mt-8 w-full flex flex-col justify-between gap-8 mb-10">
         <div
           className="font-extrabold text-bg-900 cursor-pointer flex justify-between items-center"
           onClick={toggle}
