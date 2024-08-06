@@ -14,7 +14,7 @@ const CvBody = ({ activeLayout }) => {
   };
 
   return (
-    <div className={`px-10 py-7 bg-white h-full flex-grow ${activeLayout !== 'top' ? 'w-3/5' : ''}`}>
+    <div className={`px-10 py-7 bg-white h-full flex-grow ${activeLayout !== 'top' ? 'w-6/8' : ''}`}>
       {/* Education */}
       <h1 className={`bg-gray-300 text-center font-bold ${colorClasses[selectedColor]} rounded-sm text-lg`}>
         Education
