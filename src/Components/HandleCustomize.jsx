@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import { AppContext } from "../App";
 import Layout from "./Layout";
 import Fonts from "./Fonts";
-import { AppContext } from "../App";
 
 const HandleCustomize = ({
   activeLayout,
@@ -22,6 +22,13 @@ const HandleCustomize = ({
     setSelectedColor(colorValue);
   };
 
+  const colorClasses = {
+    "slate-800": "bg-slate-800",
+    "teal-500": "bg-teal-500",
+    "indigo-600": "bg-indigo-600",
+    "green-600": "bg-green-600",
+  };
+
   return (
     <div className="">
       {/* layout */}
@@ -35,7 +42,7 @@ const HandleCustomize = ({
             {colors.map((color) => (
               <div
                 key={color.value}
-                className={`bg-${color.value} rounded-full h-10 w-10 shadow-2xl shadow-black cursor-pointer ${
+                className={`${colorClasses[color.value]} rounded-full h-10 w-10 shadow-2xl shadow-black cursor-pointer ${
                   selectedColor === color.value ? "ring-4 ring-gray-500" : ""
                 }`}
                 onClick={() => handleColorSelect(color.value)}
