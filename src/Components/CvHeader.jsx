@@ -32,21 +32,21 @@ const CvHeader = ({ activeLayout }) => {
         }`}
       >
         {email && (
-          <div className="flex items-center gap-2 text-white py-1 h-8">
+          <div className="flex items-center gap-1 text-white py-1 h-8 text-xs  lg:text-lg xl:text-xl">
             <MdEmail className="text-xl" />
-            <p className="ml-1">{email}</p>
+            <p className="">{email}</p>
           </div>
         )}
         {phone && (
-          <div className="flex items-center gap-2 text-white py-1 h-8">
+          <div className="flex items-center gap-1 text-white py-1 h-8 text-xs  lg:text-lg xl:text-xl">
             <FaPhoneAlt className="text-xl" />
-            <p className="ml-1">{phone}</p>
+            <p className="">{phone}</p>
           </div>
         )}
         {address && (
-          <div className="flex items-center gap-2 text-white py-1 h-8">
+          <div className="flex items-center gap-1 text-white py-1 h-8 text-xs  lg:text-lg xl:text-xl">
             <FaLocationDot className="text-xl" />
-            <p className="ml-1">{address}</p>
+            <p className="">{address}</p>
           </div>
         )}
       </div>
