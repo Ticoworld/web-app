@@ -66,12 +66,12 @@ const App = () => {
         location, setLocation, editIndex, setEditIndex, educationEntries, setEducationEntries,
         experienceEntries, setExperienceEntries, selectedColor, setSelectedColor
       }}>
-        <div className="flex flex-col lg:flex-row justify-between items-start relative">
-          <div className="flex justify-between gap-3">
-            <div className="sticky top-0">
+        <div className="flex flex-col lg:flex-row justify-between items-start relative gap-1">
+          <div className="flex flex-col lg:flex-row justify-between gap-3 w-full lg:w-auto">
+            <div className="w-full lg:w-auto sticky top-0">
               <HandleFormat active={active} setActive={setActive} />
             </div>
-            <div>
+            <div className="w-full lg:w-auto">
               <HandleEditPage
                 active={active}
                 activeLayout={activeLayout}
@@ -85,7 +85,7 @@ const App = () => {
             <UserCv activeLayout={activeLayout} activeFont={activeFont} />
           </div>
         </div>
-        <button onClick={() => { downloadPdf() }}>Download Cv</button>
+        <button onClick={()=>{downloadPdf()}}>Download Cv</button>
       </AppContext.Provider>
     </div>
   );
