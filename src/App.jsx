@@ -71,7 +71,11 @@ const App = () => {
   const [selectedColor, setSelectedColor] = useState("slate-800");
 
   return (
-    <div className="bg-slate-100 p-7">
+    <div className="bg-slate-100 p-5">
+      <p className="text-center text-sm text-blue-600 mt-2 font-bold block lg:hidden">
+  For the best experience, please turn on "Desktop site" mode in your browser settings.
+</p>
+
       <AppContext.Provider
         value={{
           fullName,
