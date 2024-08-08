@@ -102,7 +102,7 @@ const App = () => {
           setSelectedColor,
         }}>
         <div className="flex flex-col lg:flex-row justify-between items-start relative gap-1">
-          <div className="flex flex-col lg:flex-row justify-between gap-3 w-full lg:w-auto">
+          <div className="flex lg:flex-row justify-between gap-3 w-full lg:w-auto">
             <div className="w-full lg:w-auto sticky top-0">
               <HandleFormat active={active} setActive={setActive} />
             </div>

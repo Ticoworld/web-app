@@ -19,10 +19,10 @@ const CvHeader = ({ activeLayout }) => {
     <div
       className={`${
         colorClasses[selectedColor]
-      } w-full flex gap-4 flex-col items-center ${
+      } flex gap-4 flex-col items-center ${
         activeLayout === "top"
           ? "justify-center h-40"
-          : "h-full items-start flex flex-grow-0 w-full sm:w-7/8 p-8"
+          : "items-start flex flex-grow-0 sm:w-7/8 p-8"
       }`}
     >
       <h2 className={`font-extrabold text-gray-50 text-2xl sm:text-4xl`}>{fullName}</h2>
