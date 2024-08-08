@@ -71,6 +71,7 @@ const App = () => {
   const [selectedColor, setSelectedColor] = useState("slate-800");
 
   return (
+    
     <div className="bg-slate-100 p-5">
       <p className="text-center text-sm text-blue-600 mt-2 font-bold block md:hidden">
   For the best experience, please turn on "Desktop site" mode in your browser settings.
@@ -104,6 +105,7 @@ const App = () => {
           setExperienceEntries,
           selectedColor,
           setSelectedColor,
+          activeLayout,
         }}>
         <div className="flex flex-col lg:flex-row justify-between items-start relative gap-1">
           <div className="flex lg:flex-row justify-between gap-3 w-full lg:w-auto">
@@ -132,6 +134,7 @@ const App = () => {
           Download CV
         </button>
       </AppContext.Provider>
+      
     </div>
   );
 };

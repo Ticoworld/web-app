@@ -25,6 +25,9 @@ const CvHeader = ({ activeLayout }) => {
           : "items-start flex flex-grow-0 sm:w-7/8 p-8"
       }`}
     >
+
+<div>
+  </div>
       <h2 className={`font-extrabold text-gray-50 text-2xl sm:text-4xl`}>{fullName}</h2>
       <div
         className={`flex gap-5 ${

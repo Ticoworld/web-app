@@ -19,7 +19,7 @@ const CvBody = ({ activeLayout }) => {
       <div  className={`bg-gray-200 text-center font-bold ${colorClasses[selectedColor]} rounded-sm text-lg pb-4 mt-6`}>
         <h1>Education</h1>
       </div>
-      
+  
       <div className="mb-6">
         <CvEducation />
       </div>

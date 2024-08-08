@@ -64,6 +64,7 @@ const currentTab = (id)=> {
 
  return (
     <div className="learn">
+                <img src="/src/img/logo.png" alt="" />
 
         <div className="flex">
             {
@@ -85,6 +86,7 @@ const currentTab = (id)=> {
                     ))
                 }
             </div>
+
     </div>
  )
 

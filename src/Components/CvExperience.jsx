@@ -2,21 +2,21 @@ import React, { useContext } from "react";
 import { AppContext } from "../App";
 
 const CvExperience = () => {
-  const { experienceEntries } = useContext(AppContext);
+  const { experienceEntries, activeLayout } = useContext(AppContext);
 
   return (
-    <div className="bg-white py-5 px-3 rounded-xl mt-3 w-full">
+    <div className="bg-white py-5 rounded-xl mt-3 w-full">
       <div className="font-extrabold text-bg-900"></div>
       <div>
         {experienceEntries.map((entry, index) => (
           <div key={index} className="pb-4">
-            <div className="flex items-center gap-1">
-              <div className="w-4/12 text-sm">
+            <div className="flex items-center gap-8">
+            <div className={`w-4/12 ${activeLayout !== 'top'? `text-xs font-semibold`:`text-sm`}`}>
                 <span>{entry.startDate}</span> - <span>{entry.endDate}</span>
               </div>
               <p className="font-bold w-9/12">{entry.company}</p>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-8">
               <div className="w-4/12 text-sm">
                 <span>{entry.location}</span>
               </div>
@@ -24,7 +24,7 @@ const CvExperience = () => {
                 {entry.positionTitle}
               </p>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-8">
               <div className="w-4/12"></div>
               <p className="text-md w-9/12">{entry.description}</p>
             </div>
