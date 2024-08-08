@@ -72,7 +72,7 @@ const App = () => {
 
   return (
     <div className="bg-slate-100 p-5">
-      <p className="text-center text-sm text-blue-600 mt-2 font-bold block lg:hidden">
+      <p className="text-center text-sm text-blue-600 mt-2 font-bold block md:hidden">
   For the best experience, please turn on "Desktop site" mode in your browser settings.
 </p>
 
